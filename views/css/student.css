@@ -1,0 +1,68 @@
+/* ================= STUDENT DASHBOARD CSS ================= */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.custom-table th {
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.custom-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-file {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Uniform Action Buttons */
+.action-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 32px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    margin-left: 5px;
+}
+
+.btn-view {
+    background-color: #3498db;
+}
+
+.btn-edit {
+    background-color: #f39c12;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.locked-text {
+    color: gray;
+    font-size: 12px;
+    margin-left: 10px;
+}

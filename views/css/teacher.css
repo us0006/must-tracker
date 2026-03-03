@@ -1,0 +1,126 @@
+/* ================= TEACHER DASHBOARD CSS ================= */
+.stats-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--must-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value { 
+    font-size: 32px; 
+    margin: 0; 
+    background: transparent !important; /* Yeh line background color ko khatam kar degi */
+    padding: 0 !important; 
+}
+
+.stat-value.pending {
+    color: #f39c12;
+}
+
+.stat-value.approved {
+    color: #2ecc71;
+}
+
+.stat-value.rejected {
+    color: #e74c3c;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #555;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submission-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.doc-link {
+    color: #004d99;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.remarks-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.action-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-approve {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-reject {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th {
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+.history-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard - MUST Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <img src="img/must-logo.png" style="width: 60px; margin-bottom: 20px;">
+            <h3>Student Portal</h3>
+            <hr style="margin: 20px 0; opacity: 0.3;">
+            <p id="user-reg" style="font-size: 0.8rem;">Loading Reg...</p>
+            <ul style="list-style: none; margin-top: 30px; padding-left: 0;">
+                <li style="margin-bottom: 15px;"><a href="#summary"
+                        style="color: white; text-decoration: none;">Dashboard</a></li>
+                <li style="margin-bottom: 15px;"><a href="#profile" style="color: white; text-decoration: none;">My
+                        Profile</a></li>
+                <li style="margin-bottom: 15px;"><a href="#submit" style="color: white; text-decoration: none;">Submit
+                        New</a></li>
+                <li><a href="index.html" style="color: var(--must-gold); text-decoration: none;">Logout</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header style="margin-bottom: 30px;">
+                <h2 id="welcome-name" style="color: var(--must-blue);">Welcome, Student</h2>
+            </header>
+            <div class="stats-row" id="summary"></div>
+
+            <div class="card" id="profile" style="margin-top: 30px;">
+                <h3 style="color: var(--must-blue);">👤 My Profile Settings</h3>
+                <form id="updateProfileForm" style="margin-top: 20px;">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;"><label>Full Name</label><input type="text"
+                                id="prof_name" required class="form-input"></div>
+                        <div style="flex: 1; min-width: 200px;"><label>Email Address</label><input type="email"
+                                id="prof_email" required class="form-input"></div>
+                    </div>
+                    <hr style="margin: 20px 0; border-top: 1px solid #eee;">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;"><label>Current Password <span
+                                    style="color:red">*</span></label><input type="password" id="prof_current_pass"
+                                required class="form-input" placeholder="Required to save changes"></div>
+                        <div style="flex: 1; min-width: 200px;"><label>New Password
+                                <small>(Optional)</small></label><input type="password" id="prof_new_pass"
+                                class="form-input" placeholder="Leave blank to keep current"></div>
+                    </div>
+                    <button type="submit"
+                        style="margin-top: 20px; background-color: #2ecc71; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">Save
+                        Changes</button>
+                </form>
+            </div>
+
+            <div class="card" id="submit" style="margin-top: 30px;">
+                <h3 style="color: var(--must-blue);">Submit New Achievement</h3>
+                <form id="studentSubmitForm" style="margin-top: 20px;">
+                    <div class="form-group"><label>Achievement Title</label><input type="text" id="ach_title" required
+                            class="form-input"></div>
+                    <div class="form-group" style="margin-top: 15px;"><label>Supporting Document (PDF/JPG)</label><input
+                            type="file" id="ach_file" required class="form-file"></div>
+                    <button type="submit" class="btn-primary" style="margin-top: 20px;">Upload & Submit</button>
+                </form>
+            </div>
+
+            <div class="card" style="margin-top: 30px;">
+                <h3 style="color: var(--must-blue);">My Submitted Achievements</h3>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Achievement</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="achievement-table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="js/student.js"></script>
+</body>
+
+</html>

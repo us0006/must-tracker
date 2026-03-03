@@ -1,0 +1,162 @@
+/* ================= ADMIN DASHBOARD CSS ================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--must-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-val {
+    font-size: 32px;
+    margin: 0;
+}
+
+.stat-val.gold {
+    color: #f39c12;
+}
+
+.stat-val.green {
+    color: #2ecc71;
+}
+
+.stat-val.blue {
+    color: #3498db;
+}
+
+.stat-val.red {
+    color: #e74c3c;
+}
+
+.stat-label {
+    color: #333 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-top: 8px;
+}
+
+.section-title {
+    color: var(--must-blue);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.btn-print {
+    background-color: var(--must-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.filter-select {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-select:focus {
+    border-color: var(--must-blue);
+}
+
+.leaderboard-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.medal {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.lb-score {
+    color: var(--must-blue);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.admin-table th {
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.admin-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-toggle {
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-role {
+    font-size: 11px;
+}
+
+.sub-text {
+    color: #666;
+    font-size: 14px;
+}
+
+@media print {
+
+    .sidebar,
+    .btn-manage,
+    .btn-print,
+    .filter-controls {
+        display: none !important;
+    }
+}

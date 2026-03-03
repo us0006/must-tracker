@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MUST Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="auth-container">
+        <img src="img/must-logo.png" alt="MUST Logo" class="logo-img">
+        <h2>MUST Tracker</h2>
+        <p class="subtitle">Student Achievement Tracker (Web-Based System)</p>
+
+        <div id="login-form">
+            <form id="authLoginForm">
+                <div class="form-group">
+                    <label>Registration Number / Email</label>
+                    <input type="text" id="login_id" placeholder="e.g. FA23-BSE-048" required>
+                </div>
+                <div class="form-group">
+                    <label>Login As (Select Role)</label>
+                    <select id="login_role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login_pass" required>
+                </div>
+                <button type="submit" class="btn-primary">Secure Login</button>
+            </form>
+            <p class="toggle-link">New user? <a href="#" onclick="toggleAuth()">Register Here</a></p>
+        </div>
+
+        <div id="register-form" style="display: none;">
+            <form id="authRegisterForm">
+                <div class="form-group"><label>Full Name</label><input type="text" id="reg_name" required></div>
+                <div class="form-group"><label>University Email</label><input type="email" id="reg_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>I am a:</label>
+                    <select id="reg_role" onchange="updateRegistrationUI()" required>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Department</label>
+                    <input type="text" id="reg_dept" placeholder="e.g. Software Engineering" required>
+                </div>
+
+                <div class="form-group" id="session_container">
+                    <label>Academic Session</label>
+                    <input type="text" id="reg_session" placeholder="2023-2027">
+                </div>
+
+                <div class="form-group">
+                    <label id="id_label">Registration Number</label>
+                    <input type="text" id="reg_id" required>
+                </div>
+
+                <div class="form-group"><label>Password</label><input type="password" id="reg_pass" required></div>
+                <div class="form-group"><label>Confirm Password</label><input type="password" id="reg_confirm" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+            <p class="toggle-link">Back to Login? <a href="#" onclick="toggleAuth()">Click Here</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
